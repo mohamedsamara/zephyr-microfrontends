@@ -1,6 +1,5 @@
 {
-  "name": "ze-starter-turbo",
-  "private": true,
+  "name": "zephyr-microfrontends",
   "scripts": {
     "build": "turbo build",
     "check": "biome check --write",

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from 'react';
 
 interface StorageOptions<T> {
   // Optional serializer/deserializer functions
@@ -32,7 +32,7 @@ export function useLocalStorage<T>(
       // Handle initial value if it's a function
       return initialValue instanceof Function ? initialValue() : initialValue;
     } catch (error) {
-      onError(error instanceof Error ? error : new Error("Storage error"));
+      onError(error instanceof Error ? error : new Error('Storage error'));
       return initialValue instanceof Function ? initialValue() : initialValue;
     }
   });
@@ -42,7 +42,7 @@ export function useLocalStorage<T>(
     try {
       window.localStorage.setItem(key, serializer(storedValue));
     } catch (error) {
-      onError(error instanceof Error ? error : new Error("Storage error"));
+      onError(error instanceof Error ? error : new Error('Storage error'));
     }
   }, [key, storedValue, serializer, onError]);
 
@@ -54,7 +54,7 @@ export function useLocalStorage<T>(
           value instanceof Function ? value(storedValue) : value;
         setStoredValue(valueToStore);
       } catch (error) {
-        onError(error instanceof Error ? error : new Error("Storage error"));
+        onError(error instanceof Error ? error : new Error('Storage error'));
       }
     },
     [storedValue, onError]
@@ -68,7 +68,7 @@ export function useLocalStorage<T>(
         initialValue instanceof Function ? initialValue() : initialValue
       );
     } catch (error) {
-      onError(error instanceof Error ? error : new Error("Storage error"));
+      onError(error instanceof Error ? error : new Error('Storage error'));
     }
   }, [key, initialValue, onError]);
 

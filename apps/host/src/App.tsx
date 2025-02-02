@@ -7,7 +7,7 @@ import { useLocalStorage } from './useLocalStorage';
 function App() {
   const [showBoundaries, setShowBoundaries] = useLocalStorage(
     'showBoundaries',
-    false,
+    false
   );
   return (
     <BrowserRouter>

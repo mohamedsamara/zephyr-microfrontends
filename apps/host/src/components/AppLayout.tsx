@@ -2,7 +2,7 @@ import { Header } from './Header';
 import { Outlet } from 'react-router';
 
 export default function Layout({
-  showBoundary = false,
+  showBoundary = false
 }: { showBoundary?: boolean }) {
   return (
     <div
